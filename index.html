@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirstCut</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;600&family=Wix+Madefor+Text:wght@400;500&display=swap">
+<style>
+/* Layout: one readable column, a sticky contents bar, three anchored sections a reviewer can link to. */
+:root {
+  --bg: oklch(97% 0.006 75);
+  --surface: oklch(99.5% 0.003 75);
+  --ink: oklch(22% 0.016 268);
+  --muted: oklch(46% 0.016 265);
+  --rule: oklch(88% 0.009 75);
+  --accent: oklch(44% 0.13 274);
+  --display: "Wix Madefor Display", ui-sans-serif, system-ui, sans-serif;
+  --body: "Wix Madefor Text", ui-sans-serif, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: oklch(17.5% 0.014 268); --surface: oklch(21% 0.016 268); --ink: oklch(95% 0.006 75);
+    --muted: oklch(72% 0.016 262); --rule: oklch(30% 0.016 266); --accent: oklch(78% 0.10 274); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: oklch(17.5% 0.014 268); --surface: oklch(21% 0.016 268); --ink: oklch(95% 0.006 75);
+  --muted: oklch(72% 0.016 262); --rule: oklch(30% 0.016 266); --accent: oklch(78% 0.10 274); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 1rem/1.6 var(--body); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 2.5rem; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); }
+h2 { font-size: 1.45rem; padding-top: 0.5rem; }
+h3 { font-size: 1.05rem; margin-top: 1.2rem; }
+p, ul { margin: 0.6rem 0 0; }
+ul { padding-left: 1.2rem; }
+li + li { margin-top: 0.3rem; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.lede { color: var(--muted); font-size: 1.05rem; max-width: 38rem; }
+.meta { color: var(--muted); font-size: 0.875rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+nav a { padding: 0.35rem 0.85rem; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; font-size: 0.9rem; background: var(--surface); }
+section { border-top: 1px solid var(--rule); padding-top: 1.5rem; scroll-margin-top: 1rem; }
+.scopes { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin-top: 0.8rem; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 500; color: var(--muted); }
+code { font-size: 0.88em; }
+
+.brand { display:flex; align-items:center; gap:0.75rem; } .brand img { width:56px; height:56px; border-radius:14px; } nav a[aria-current] { border-color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="wrap">
+<header style="display:grid; gap:1rem;">
+    <div class="brand"><img src="logo.png" alt="" width="56" height="56"><h1>FirstCut</h1></div>
+    <p class="lede">FirstCut is a personal desktop tool that turns videos its owner is allowed to use into short vertical clips and longer edits, then posts them to the owner&rsquo;s own social accounts through each platform&rsquo;s official API. It runs on one Windows computer. It is not a public service and has no other users.</p>
+    <nav aria-label="Site"><a href="./" aria-current="page">Home</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a></nav>
+    <p class="meta">Effective 22 November 2026.</p>
+  </header>
+</main>
+</body>
+</html>
